@@ -1,0 +1,17 @@
+1. remove jessionid
+<session-config>
+  <!-- Disables URL-based sessions (no more 'jsessionid' in the URL using Tomcat) -->
+  <tracking-mode>COOKIE</tracking-mode>
+        <session-timeout>30</session-timeout>
+</session-config>
+
+Because that:
+Error: ajaxMethod("/restfulService/services/register/;jsessionid=A62D515B82CB66B8C4FA1CF66C4C79DA" + str, "content");
+Success: ajaxMethod("/restfulService/services/register/;jsessionid=A62D515B82CB66B8C4FA1CF66C4C79DA" + str, "content");
+
+2. config data.txt
+src\main\resources\file.properties
+#class path/data.txt
+com.paypal.project.filePath=d:/text/data.txt
+
+

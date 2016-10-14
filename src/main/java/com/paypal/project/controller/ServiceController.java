@@ -76,6 +76,9 @@ public class ServiceController {
 	// fetchID
 	private HashMap<String, List<UnicodeString>> fetch(String strID) {
 		List<String> fetchStrings = service.fetchStrings(strID);
+		if (fetchStrings == null) {
+			return null;
+		}
 		List<UnicodeString> list = Lists.newArrayList();
 		for (String str : fetchStrings) {
 			list.add(new UnicodeString(str, Integer.parseInt(strID)));
@@ -105,6 +108,9 @@ public class ServiceController {
 	// fetch all
 	private HashMap<String, List<StringSet>> fetchAllContent() {
 		Map<Integer, List<String>> fetchAll = service.fetchAll();
+		if (fetchAll == null) {
+			return null;
+		}
 		Set<Entry<Integer, List<String>>> entrySet = fetchAll.entrySet();
 		Iterator<Entry<Integer, List<String>>> iterator = entrySet.iterator();
 		List<StringSet> list = Lists.newArrayList();
