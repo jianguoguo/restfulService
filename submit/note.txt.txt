@@ -7,7 +7,7 @@
 
 Because that:
 Error: ajaxMethod("/restfulService/services/register/;jsessionid=A62D515B82CB66B8C4FA1CF66C4C79DA" + str, "content");
-Success: ajaxMethod("/restfulService/services/register/;jsessionid=A62D515B82CB66B8C4FA1CF66C4C79DA" + str, "content");
+Success: ajaxMethod("/restfulService/services/register/" + str, "content");
 
 2. config data.txt
 src\main\resources\file.properties
